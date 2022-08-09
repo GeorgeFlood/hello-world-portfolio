@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  line-height: 1.2;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desk) {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: "Lora", serif;
+  padding: 1rem 1rem;
+  scroll-behavior: smooth;
+
+  @include respond(tab-port) {
+    padding: 0 0;
+  }
+}

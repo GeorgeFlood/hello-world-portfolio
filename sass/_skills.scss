@@ -1,0 +1,195 @@
+.main {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding-top: 10rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  background-image: linear-gradient(
+      rgba(#fff, 0.75) 10%,
+      transparent 80%,
+      rgba(#fff, 0.75) 10%
+    ),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+
+  &__heading {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 12rem;
+      width: 10rem;
+      background-color: rgba(206, 112, 217, 1);
+      top: 0;
+      left: 95%;
+      border-radius: 4px;
+
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 4vw;
+    padding: 2.2vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    display: inline-block;
+    background-image: linear-gradient(to right, #b9a4d3, rgb(160, 66, 179));
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 0vw;
+    @include respond(phone) {
+      font-size: 2.8rem;
+    }
+
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+  &__title--span {
+    font-size: 4vw;
+    line-height: 2.6vw;
+    color: rgba(#000000, 0.7);
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Pacifico", cursive, sans-serif;
+    margin-right: 30rem;
+
+    @include respond(phone) {
+      font-size: 3rem;
+      margin: 0 auto;
+      padding-right: 10rem;
+      line-height: 5.2vw;
+    }
+  }
+}
+
+.skills {
+  position: relative;
+  margin: 10rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 300px));
+  grid-template-rows: repeat(auto-fit, 1fr);
+  justify-content: center;
+  grid-gap: 11rem;
+
+  &__col {
+    transition: all 0.4s ease-in-out;
+    @include respond(tab-port) {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .fade-in {
+    opacity: 0;
+
+    &.appear {
+      opacity: 1;
+    }
+  }
+
+  .appear.right {
+    animation: sideInRight 0.4s ease-in;
+  }
+
+  .appear.left {
+    animation: sideInLeft 0.4s ease-in;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 12rem;
+    width: 10rem;
+    background-color: rgba(206, 112, 217, 1);
+    bottom: -7rem;
+    left: -3rem;
+    border-radius: 4px;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__col--img {
+    position: relative;
+    height: 12rem;
+    width: 12rem;
+    animation: svgAnime infinite 3s;
+    padding-bottom: 2rem;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-self: center;
+  }
+
+  &__col--p {
+    font-size: 2rem;
+    font-weight: lighter;
+    align-self: center;
+    justify-self: center;
+    color: rgba(#3f3f3f, 0.8);
+  }
+}
+
+.projects {
+  position: relative;
+  background-color: #dfdbe5;
+  background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+//////// SHAPE DIVIDERS //////////
+
+.custom-shape-divider-bottom-1658442332 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1658442332 svg {
+  position: relative;
+  display: block;
+  width: calc(151% + 1.3px);
+  height: 65px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1658442332 .shape-fill {
+  fill: #ffffff;
+}
+
+.custom-shape-divider-top-1658615298 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1658615298 svg {
+  position: relative;
+  display: block;
+  width: calc(111% + 1.3px);
+  height: 105px;
+}
+
+.custom-shape-divider-top-1658615298 .shape-fill {
+  fill: #fff;
+}

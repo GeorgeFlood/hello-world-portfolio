@@ -1,0 +1,201 @@
+.projects {
+  position: relative;
+  padding: 15rem 2rem 23rem 2rem;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  @include respond(phone) {
+  }
+
+  &__card--top {
+    height: 2rem;
+    background-image: linear-gradient(
+      90deg,
+      rgb(238, 186, 249),
+      rgb(223, 51, 223)
+    );
+  }
+
+  &__container {
+    position: relative;
+    padding: 10rem 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4rem;
+
+    @include respond(phone) {
+      padding: 5rem 0;
+    }
+
+    @include respond(big-desk) {
+      padding: 10rem 4rem;
+    }
+
+    &--info {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 45%;
+
+      @include respond(big-desk) {
+        padding: 1rem 35rem;
+      }
+    }
+
+    &--infoTitle {
+      font-size: 4rem;
+      padding-bottom: 2rem;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    &--infoPara {
+      font-size: 2.2rem;
+      font-weight: 600;
+      line-height: 1.5;
+      color: rgb(0, 0, 0);
+    }
+
+    &--btnSpan {
+      transition: all 0.3s ease-in-out;
+    }
+
+    &--btn,
+    &--btn:link {
+      width: 15%;
+      font-size: 2.4rem;
+      display: block;
+      border-radius: 3px;
+      text-decoration: none;
+      color: rgb(150, 77, 224);
+      margin-top: 2rem;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease-in-out;
+      outline: 3px solid rgb(192, 129, 231);
+
+      @include respond(tab-port) {
+        margin: 2rem auto;
+        background-color: #fff;
+        width: 30%;
+      }
+      @include respond(phone) {
+        margin: 2rem auto;
+        background-color: #fff;
+        width: 35%;
+      }
+
+      @include respond(big-desk) {
+        width: 12%;
+      }
+
+      &:hover .projects__container--btnSpan {
+        margin-left: 15px;
+      }
+
+      &:hover {
+        background-color: #fff;
+        box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.3);
+
+        @include respond(phone) {
+          box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+
+    &--projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-rows: repeat(auto-fit);
+      grid-gap: 6rem 3rem;
+      backface-visibility: hidden;
+
+      @include respond(tab-port) {
+        grid-gap: 10rem 6rem;
+        grid-template-columns: repeat(2, minmax(300px, 400px));
+      }
+      @include respond(phone) {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 4rem 0;
+      }
+
+      @include respond(big-desk) {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-rows: repeat(2, auto-fit);
+        grid-column-gap: 11rem;
+      }
+    }
+    &--card {
+      height: 100%;
+      background-color: rgba(163, 163, 163, 0.8);
+      border-radius: 4px;
+      box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.4);
+      transition: all 0.5s ease-in-out;
+      overflow: hidden;
+      @include respond(tab-port) {
+        background-color: #cbb5e7;
+      }
+
+      & h1 {
+        font-weight: bold;
+        color: rgb(150, 77, 224);
+        background-color: rgba(#cbb5e7, 0.7);
+        width: 100%;
+        font-style: italic;
+        text-align: center;
+        font-family: "Pacifico", cursive, sans-serif;
+        padding: 1rem 0;
+      }
+
+      & p {
+        position: relative;
+        text-align: left;
+        hyphens: auto;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        padding: 0.3rem 1rem;
+
+        @include respond(phone) {
+          font-size: 1.8rem;
+        }
+      }
+
+      & img {
+        display: inline-block;
+        overflow: hidden;
+        width: 100%;
+        filter: grayscale(100%);
+
+        @include respond(tab-port) {
+          filter: none;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.02);
+        outline: 3px solid rgb(174, 72, 242);
+        outline-offset: 1rem;
+        z-index: 10;
+        background-color: #cbb5e7;
+        box-shadow: 0 4rem 7rem rgba(0, 0, 0, 0.6);
+
+        @include respond(tab-port) {
+          outline: none;
+          transform: scale(1);
+        }
+      }
+      &:hover img {
+        filter: grayscale(0%);
+      }
+
+      &:hover .projects__card--top {
+        background-image: linear-gradient(
+          90deg,
+          rgb(238, 186, 249) 40%,
+          rgb(223, 51, 223)
+        );
+      }
+    }
+  }
+}

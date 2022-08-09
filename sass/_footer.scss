@@ -1,0 +1,128 @@
+.footer {
+  height: 20vh;
+  background-image: linear-gradient(105deg, rgba(grey, 1), rgb(58, 58, 58));
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 5rem;
+  @include respond(phone) {
+    margin-top: 5rem;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 0;
+    flex-direction: column;
+    height: 40vh;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+  }
+
+  &__sec1 {
+    font-size: 1.9rem;
+    color: #fff;
+
+    flex: 0 0 20%;
+
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+
+  &__sec2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 10rem;
+    border-bottom: 2px solid rgb(196, 132, 246);
+
+    @include respond(phone) {
+      margin-bottom: 0rem;
+    }
+  }
+
+  &__sec3 {
+    flex: 0 0 15%;
+    &--title {
+      text-align: center;
+      font-size: 3.2rem;
+      color: #fff;
+      padding-right: 1rem;
+      border-right: 2px solid #b9a4d3;
+
+      @include respond(phone) {
+        border-right: none;
+        border-bottom: 2px solid #b9a4d3;
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    &--socials {
+      display: flex;
+      justify-content: space-around;
+      justify-content: center;
+      align-items: center;
+
+      @include respond(phone) {
+        flex-direction: column;
+        padding-top: 0.5rem;
+      }
+    }
+  }
+  // &__social--icons {
+  //   @include respond(phone) {
+  //     display: flex;
+  //   }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social {
+  &-links {
+    display: flex;
+    padding-left: 1rem;
+  }
+
+  &-btn {
+    cursor: pointer;
+    height: 5rem;
+    width: 5rem;
+    font-family: "Titillium Web", sans-serif;
+    color: #333;
+    font-size: 1.3rem;
+    border-radius: 1rem;
+    box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.3);
+    background: white;
+    margin: 5px;
+    transition: 1s;
+  }
+
+  &-btn span {
+    width: 0px;
+    overflow: hidden;
+    transition: 1s;
+    text-align: center;
+  }
+
+  &-btn:hover {
+    width: 150px;
+    border-radius: 5px;
+  }
+
+  &-btn:hover span {
+    padding: 1rem;
+    width: max-content;
+  }
+}
+
+#linkedin svg {
+  fill: #c245fc;
+}
+
+#github {
+  fill: #c245fc;
+}
