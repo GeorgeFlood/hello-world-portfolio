@@ -48,14 +48,18 @@ $color-white: #fff;
   }
 }
 
-@keyframes sideInLeft {
+////// NAME SHOULD PROBABLY BE CHANGED TO SCALE IN
+
+@keyframes scaleIn {
   0% {
-    transform: translateX(250px);
+    // transform: translateX(250px);
     opacity: 0.2;
+    transform: scale(0.4);
   }
   100% {
-    transform: translateX(0);
+    // transform: translateX(0);
     opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -120,5 +124,21 @@ $color-white: #fff;
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes shootingStar {
+  0% {
+    left: 105%;
+    opacity: 0;
+  }
+
+  90% {
+    left: -50%;
+    opacity: 1;
+  }
+  100% {
+    left: -60%;
+    opacity: 0;
   }
 }

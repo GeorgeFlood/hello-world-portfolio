@@ -15,13 +15,13 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="header" id="aboutMe">
       <nav class="header__nav">
         <a class="header__logo" href="#">LOGO</a>
         <ul class="header__list">
-          <li class="header__list--item"><a class="header__list--item" href="#">About me</a></li>
-          <li class="header__list--item"><a class="header__list--item" href="#">Projects</a></li>
-          <li class="header__list--item"><a class="header__list--item"href="#">Contact</a></li>
+          <li class="header__list--item"><a class="header__list--item" href="#aboutMe">About me</a></li>
+          <li class="header__list--item"><a class="header__list--item" href="#projects">Projects</a></li>
+          <li class="header__list--item"><a class="header__list--item"href="#form">Contact</a></li>
            <!-- DOUBLE CLASSES ON LI & A TAG ACCIDENTLY CREATES A COOL SCRIBBLE UNDERLINE EFFECT -->
         </ul>
       </nav>
@@ -36,10 +36,10 @@
         </span>
 
         <nav class="header__mobile--nav">
-          <ul>
-          <li><a class="header__mobile--items" href="#">About me</a></li>
-          <li><a class="header__mobile--items" href="#">Projects</a></li>
-          <li><a class="header__mobile--items" href="#">Contact</a></li>
+          <ul class="header__mobile--ul">
+          <li><a class="header__mobile--items" href="#aboutMe">About me</a></li>
+          <li><a class="header__mobile--items" href="#projects">Projects</a></li>
+          <li><a class="header__mobile--items" href="#form">Contact</a></li>
           </ul>
 
           <div class='social-links header__mobile--social'>
@@ -61,7 +61,7 @@
         <div class="header__info">
           <h1 class="header__info--title">I'm George</h1>
           <h2 class="header__info--secondary">Let's talk!</h2>
-          <p class="header__info--bio">
+          <p class="header__info--bio" id="aboutMe">
             Hey! I've been coding front-end projects for the past 2 years,
             completed more courses than a for loop can iterate over, and have
             definitely entered my final phase of nerd. Javascript is both my
@@ -75,6 +75,7 @@
         <div class="header__img">
         <img class="header__img--me" src="img/IMG_0936.png" alt="self graphic" title="Yours truly">
       </div>
+
     </div>
       <div class="custom-shape-divider-bottom-1658442332">
         <svg
@@ -174,7 +175,7 @@
       </div>
     </section>
 
-    <div class="projects">
+    <div class="projects" id="projects">
       <div class="custom-shape-divider-top-1658615298">
         <svg
           data-name="Layer 1"
@@ -301,7 +302,7 @@
 </div>
 
 <section class="contact">
-      <form action="#" class="form">
+      <form action="#" class="form" id="form">
      <div class="contact__form">
     <h1 class="form__title">Let's talk!</h1>
 
