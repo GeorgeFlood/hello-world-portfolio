@@ -3,6 +3,7 @@ const header = document.querySelector(".header__nav");
 const sectionOne = document.querySelector(".header");
 const mobileMenu = document.querySelector(".header__mobile--icon");
 const mobileMenuBtn = document.querySelector(".header__mobile--nav");
+const mobileMenuBG = document.querySelector(".header__mobile--nav");
 
 const sectionOneOptions = {
   rootMargin: "-240px 0px -0px 0px",
@@ -50,7 +51,7 @@ faders.forEach((fader) => {
 
 mobileMenu.addEventListener("click", (e) => {
   mobileMenu.classList.toggle("is-active");
-  document.querySelector(".header__mobile--nav").classList.toggle("is-active");
+  mobileMenuBG.classList.toggle("is-active");
 });
 
 mobileMenuBtn.addEventListener("click", (e) => {
@@ -62,8 +63,6 @@ mobileMenuBtn.addEventListener("click", (e) => {
     target.contains("is-active")
   ) {
     mobileMenu.classList.toggle("is-active");
-    document
-      .querySelector(".header__mobile--nav")
-      .classList.toggle("is-active");
+    mobileMenuBG.classList.toggle("is-active");
   }
 });

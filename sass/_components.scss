@@ -1,12 +1,47 @@
+.title {
+  font-size: 6rem;
+  padding: 2.2vw;
+  text-transform: uppercase;
+  font-weight: 900;
+  display: inline-block;
+  background-image: linear-gradient(to right, #b9a4d3, rgb(160, 66, 179));
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 0vw;
+  @include respond(phone) {
+    font-size: 2.8rem;
+  }
+
+  @include respond(phone) {
+    text-align: center;
+  }
+}
+
+.title--span {
+  font-size: 6rem;
+  line-height: 2.6vw;
+  color: rgba(#000000, 0.7);
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Pacifico", cursive, sans-serif;
+  margin-right: 30rem;
+
+  @include respond(phone) {
+    font-size: 3rem;
+    margin: 0 auto;
+    padding-right: 10rem;
+    line-height: 5.2vw;
+  }
+}
+
 .project__card--btn {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  margin-top: auto;
   padding: 2rem 0;
 }
 
 .project__card--btn button {
-  margin-top: auto;
   height: 4rem;
   width: 10rem;
   font-size: 1.7rem;
@@ -16,7 +51,7 @@
   border-radius: 5px;
   outline: 3px solid rgb(255, 255, 255);
   cursor: pointer;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     background-color: #fff;
@@ -24,7 +59,8 @@
   }
 
   &:active {
-    outline: 3px solid rgb(250, 195, 255);
+    color: rgb(153, 48, 174);
+    outline: 3px solid rgb(235, 197, 249);
     background-color: rgb(251, 251, 251);
   }
 }

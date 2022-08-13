@@ -22,7 +22,7 @@
   &__sec1 {
     font-size: 1.9rem;
     color: #fff;
-
+    text-align: center;
     flex: 0 0 20%;
 
     @include respond(phone) {
@@ -31,10 +31,11 @@
   }
 
   &__sec2 {
-    color: #fff;
+    color: rgb(243, 185, 248);
     font-size: 2rem;
     margin-bottom: 10rem;
     border-bottom: 2px solid rgb(196, 132, 246);
+    font-family: "Pacifico", cursive, sans-serif;
 
     @include respond(phone) {
       margin-bottom: 0rem;
@@ -42,18 +43,19 @@
   }
 
   &__sec3 {
-    flex: 0 0 15%;
+    flex: 0 0 25%;
+
     &--title {
       text-align: center;
       font-size: 3.2rem;
       color: #fff;
       padding-right: 1rem;
       border-right: 2px solid #b9a4d3;
-
+      font-family: "Pacifico", cursive, sans-serif;
       @include respond(phone) {
         border-right: none;
         border-bottom: 2px solid #b9a4d3;
-        padding-bottom: 0.5rem;
+        padding: 0 0 0.5rem 0;
       }
     }
 
