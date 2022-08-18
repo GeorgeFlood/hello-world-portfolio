@@ -5,9 +5,6 @@
   align-items: center;
   justify-content: space-around;
   margin-bottom: 5rem;
-  @include respond(phone) {
-    margin-top: 5rem;
-  }
 
   @include respond(phone) {
     margin-bottom: 0;
@@ -121,10 +118,10 @@
   }
 }
 
-#linkedin svg {
+.linkedin svg {
   fill: #c245fc;
 }
 
-#github {
+.github {
   fill: #c245fc;
 }

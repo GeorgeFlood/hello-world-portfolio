@@ -127,18 +127,26 @@ $color-white: #fff;
   }
 }
 
-@keyframes shootingStar {
+@keyframes shake {
   0% {
-    left: 105%;
-    opacity: 0;
+    transform: translateX(4px);
   }
-
-  90% {
-    left: -50%;
-    opacity: 1;
+  35% {
+    transform: translateX(-4px);
+  }
+  70% {
+    transform: translateX(4px);
   }
   100% {
-    left: -60%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes thankYou {
+  0% {
     opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

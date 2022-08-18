@@ -1,7 +1,7 @@
 .contact {
   position: relative;
   padding: 20rem 0 15rem 0;
-  margin-top: -16.7rem;
+  margin-top: -17.8rem;
   clip-path: polygon(0% 0%, 100% 21%, 100% 100%, 0% 100%);
   background-image: linear-gradient(90deg, #b9a4d3, rgb(160, 66, 179));
 
@@ -11,7 +11,8 @@
 
   &__form {
     margin: 0 auto;
-    height: 45rem;
+    position: relative;
+    height: 51rem;
     width: 75%;
     box-shadow: 0 1.5rem 4rem rgb(0, 0, 0, 60%);
     background-image: linear-gradient(
@@ -22,6 +23,15 @@
       url(../img/seamless-pattern-envelopes-flat-line-icons-mail-background-message-open-envelope-letter-email-vector-illustrations-black-143678274.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include respond(phone) {
+      background-image: linear-gradient(
+          110deg,
+          rgba(255, 255, 255, 0.95) 71%,
+          rgba(214, 132, 239, 0.177) 50%
+        ),
+        url(../img/seamless-pattern-envelopes-flat-line-icons-mail-background-message-open-envelope-letter-email-vector-illustrations-black-143678274.jpeg);
+    }
 
     @include respond(tab-port) {
       width: 95%;
@@ -58,7 +68,7 @@
       transition: all 0.5s;
 
       @include respond(phone) {
-        width: 40%;
+        width: 65%;
         padding: 1rem 1.5rem;
       }
       @include respond(big-desk) {
@@ -69,10 +79,12 @@
         outline: none;
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
         border-bottom: 3px solid rgb(90, 246, 119);
+        animation: shake 0.3s ease-in-out;
       }
 
       &:focus:invalid {
         border-bottom: 3px solid rgb(255, 101, 101);
+        animation: shake 0.3s ease-in-out;
       }
 
       &::-webkit-input-placeholder {
@@ -81,7 +93,7 @@
     }
 
     &__label {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       font-weight: 700;
       margin-left: 3rem;
       margin-top: 0.7rem;
@@ -95,18 +107,20 @@
 
     &__area {
       display: block;
-      background-color: rgba(rgb(218, 154, 250), 0.5);
+      background-color: rgba(rgb(254, 253, 255), 0.5);
       font-family: "Titillium Web", sans-serif;
-      padding: 1rem 1rem;
+      padding: 0.5rem 0.5rem;
+      font-size: 1.7rem;
+      margin: 0.3rem;
       border: none;
-      height: 5vw;
-      width: 35%;
+      height: 8rem;
+      width: 80%;
+      border-radius: 1rem;
+      outline: 2.5px solid #b9a4d3;
       transition: all 0.4s ease-in-out;
 
-      @include respond(phone) {
-        height: 5rem;
-      }
       @include respond(big-desk) {
+        height: 14rem;
       }
 
       &:focus {
@@ -114,5 +128,74 @@
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
       }
     }
+  }
+  &__btn {
+    position: relative;
+    top: 0;
+    width: 30%;
+    height: 3rem;
+    font-size: 2rem;
+    margin: 1rem 17rem;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: rgb(205, 114, 248);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      top: -2px;
+    }
+
+    &:active {
+      top: 2px;
+      background-color: rgb(191, 59, 252);
+    }
+
+    @include respond(tab-port) {
+      margin: 1rem 15rem;
+    }
+
+    @include respond(phone) {
+      width: 40%;
+      height: 4rem;
+      margin: 2rem 8.2rem;
+    }
+
+    @include respond(big-desk) {
+      margin: 2rem 22rem;
+      height: 4rem;
+    }
+  }
+
+  &__areaBtn {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include respond(tab-port) {
+      width: 50%;
+    }
+    @include respond(phone) {
+      width: 75%;
+    }
+    @include respond(big-desk) {
+      margin-top: 10rem;
+    }
+  }
+}
+
+.thank--you {
+  color: rgb(67, 156, 61);
+  position: relative;
+  animation: fromTop 0.3s ease-in-out backwards;
+  transition: all 0.4s ease-in-out;
+
+  &::after {
+    content: "✓";
+    position: relative;
+    top: 0;
+    left: 0;
   }
 }
