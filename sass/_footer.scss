@@ -12,6 +12,10 @@
     height: 40vh;
   }
 
+  @include respond(tab-port) {
+    margin-bottom: 0;
+  }
+
   @include respond(phone) {
     width: 100%;
   }

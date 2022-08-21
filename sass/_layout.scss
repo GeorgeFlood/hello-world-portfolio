@@ -19,3 +19,20 @@
   background: rgb(237, 179, 250);
   z-index: -10;
 }
+
+.cursor {
+  position: absolute;
+  background-color: rgb(245, 195, 255);
+  outline: 3px solid rgb(240, 128, 255);
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid $color-white;
+  border-radius: 50%;
+  transition-duration: 250ms;
+  animation: cursorAni 0.5s infinite alternate;
+  z-index: 1;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+}

@@ -5,6 +5,8 @@ const mobileMenu = document.querySelector(".header__mobile--icon");
 const mobileMenuBtn = document.querySelector(".header__mobile--nav");
 const mobileMenuBG = document.querySelector(".header__mobile--nav");
 
+const cursor = document.querySelector(".cursor");
+
 //////////////////////
 ///contact form elements
 const sendBtn = document.querySelector("#send");
@@ -79,6 +81,17 @@ mobileMenuBtn.addEventListener("click", (e) => {
     mobileMenuBG.classList.toggle("is-active");
   }
   return isActive;
+});
+
+////////////////////////////////////////////
+//cursor
+
+document.addEventListener("mousemove", (e) => {
+  cursor.setAttribute(
+    "style",
+    "top: " + (e.pageY + 30) + "px; left: " + (e.pageX - 10) + "px;"
+  );
+  console.log(cursor);
 });
 
 ////////////////////////////////////////////

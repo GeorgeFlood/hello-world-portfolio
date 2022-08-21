@@ -207,6 +207,22 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes cursorAni {
+  from {
+    transition: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+@keyframes cursorAni {
+  from {
+    transition: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
 *,
 *::before,
 *::after {
@@ -518,7 +534,7 @@ body {
 }
 @media (min-width: 112.5em) {
   .nav--scroll {
-    top: 95%;
+    top: 95.4%;
   }
 }
 
@@ -640,8 +656,6 @@ body {
   grid-template-rows: repeat(auto-fit, 1fr);
   justify-content: center;
   grid-gap: 11rem;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 .skills__col {
   transition: all 0.4s ease-in-out;
@@ -779,7 +793,7 @@ body {
 }
 @media (min-width: 112.5em) {
   .projects__container {
-    padding: 10rem 4rem;
+    padding: 10rem 25rem;
   }
 }
 .projects__container--info {
@@ -856,7 +870,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-template-rows: repeat(auto-fit);
-  grid-gap: 6rem 3rem;
+  grid-gap: 7rem 4rem;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -897,7 +911,7 @@ body {
 }
 .projects__container--card h1 {
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.9rem;
   color: rgb(150, 77, 224);
   background-color: rgba(203, 181, 231, 0.7);
   font-family: "Pacifico", cursive, sans-serif;
@@ -1068,12 +1082,12 @@ body {
   font-family: "Titillium Web", sans-serif;
   padding: 0.5rem 0.5rem;
   font-size: 1.7rem;
-  margin: 0.3rem;
+  margin-top: 0.5rem;
   border: none;
   height: 8rem;
   width: 80%;
   border-radius: 1rem;
-  outline: 2.5px solid #b9a4d3;
+  outline: 2px solid rgba(185, 164, 211, 0.5);
   transition: all 0.4s ease-in-out;
 }
 @media (min-width: 112.5em) {
@@ -1082,8 +1096,9 @@ body {
   }
 }
 .contact .form__area:focus {
-  outline: none;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  outline: 2.5px solid #b9a4d3;
+  background-color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
 .contact__btn {
   position: relative;
@@ -1173,6 +1188,11 @@ body {
     margin-bottom: 0;
     flex-direction: column;
     height: 40vh;
+  }
+}
+@media (max-width: 56.25em) {
+  .footer {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 37.5em) {
@@ -1305,6 +1325,25 @@ body {
   z-index: -10;
 }
 
+.cursor {
+  position: absolute;
+  background-color: rgb(245, 195, 255);
+  outline: 3px solid rgb(240, 128, 255);
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transition-duration: 250ms;
+  -webkit-animation: cursorAni 0.5s infinite alternate;
+          animation: cursorAni 0.5s infinite alternate;
+  z-index: 1;
+}
+@media (max-width: 56.25em) {
+  .cursor {
+    display: none;
+  }
+}
+
 .title {
   font-size: 6rem;
   padding: 2.2vw;
@@ -1342,6 +1381,11 @@ body {
     margin: 0 auto;
     padding-right: 10rem;
     line-height: 5.2vw;
+  }
+}
+@media (max-width: 56.25em) {
+  .title--span {
+    line-height: 5.5vw;
   }
 }
 

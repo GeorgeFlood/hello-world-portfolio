@@ -44,7 +44,6 @@
   grid-template-rows: repeat(auto-fit, 1fr);
   justify-content: center;
   grid-gap: 11rem;
-  backface-visibility: hidden;
 
   &__col {
     transition: all 0.4s ease-in-out;

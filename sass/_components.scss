@@ -32,6 +32,9 @@
     padding-right: 10rem;
     line-height: 5.2vw;
   }
+  @include respond(tab-port) {
+    line-height: 5.5vw;
+  }
 }
 
 .project__card--btn {

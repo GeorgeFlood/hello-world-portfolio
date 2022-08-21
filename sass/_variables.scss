@@ -150,3 +150,12 @@ $color-white: #fff;
     opacity: 1;
   }
 }
+
+@keyframes cursorAni {
+  from {
+    transition: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}

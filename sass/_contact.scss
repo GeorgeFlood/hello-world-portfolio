@@ -111,12 +111,12 @@
       font-family: "Titillium Web", sans-serif;
       padding: 0.5rem 0.5rem;
       font-size: 1.7rem;
-      margin: 0.3rem;
+      margin-top: 0.5rem;
       border: none;
       height: 8rem;
       width: 80%;
       border-radius: 1rem;
-      outline: 2.5px solid #b9a4d3;
+      outline: 2px solid rgba(#b9a4d3, 0.5);
       transition: all 0.4s ease-in-out;
 
       @include respond(big-desk) {
@@ -124,8 +124,9 @@
       }
 
       &:focus {
-        outline: none;
-        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+        outline: 2.5px solid rgba(#b9a4d3, 1);
+        background-color: #fff;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
       }
     }
   }
