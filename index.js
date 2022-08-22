@@ -92,7 +92,6 @@ document.addEventListener("mousemove", (e) => {
     "style",
     "top: " + (e.pageY + 30) + "px; left: " + (e.pageX - 10) + "px;"
   );
-  console.log(cursor);
 });
 
 document.addEventListener("click", (e) => {

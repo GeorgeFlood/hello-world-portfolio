@@ -572,7 +572,7 @@ body {
 }
 @media (min-width: 112.5em) {
   .nav--scroll {
-    top: 95.4%;
+    top: 95.5%;
   }
 }
 
@@ -893,7 +893,7 @@ body {
 }
 @media (min-width: 112.5em) {
   .projects__container--btn, .projects__container--btn:link {
-    width: 12%;
+    width: 14%;
     margin: 4rem auto;
   }
 }
