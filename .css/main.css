@@ -866,7 +866,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .projects__container--btn, .projects__container--btn:link {
-  width: 15%;
+  width: 16%;
   font-size: 2.4rem;
   display: block;
   border-radius: 3px;
