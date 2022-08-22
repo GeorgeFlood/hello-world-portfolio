@@ -32,19 +32,28 @@ $color-white: #fff;
 /// ANIMATIONS
 @keyframes svgAnime {
   0% {
-    transform: rotate(0deg);
+    transform: translate(0, 0);
   }
-
-  40% {
-    transform: rotate(-6deg);
+  1.78571% {
+    transform: translate(5px, 0);
   }
-
-  80% {
-    transform: rotate(6deg);
+  3.57143% {
+    transform: translate(0, 0);
   }
-
+  5.35714% {
+    transform: translate(5px, 0);
+  }
+  7.14286% {
+    transform: translate(0, 0);
+  }
+  8.92857% {
+    transform: translate(5px, 0);
+  }
+  10.71429% {
+    transform: translate(0, 0);
+  }
   100% {
-    transform: rotate(0deg);
+    transform: translate(0, 0);
   }
 }
 
@@ -52,34 +61,25 @@ $color-white: #fff;
 
 @keyframes scaleIn {
   0% {
-    // transform: translateX(250px);
+    transform: translateX(250px);
     opacity: 0.2;
     transform: scale(0.4);
   }
   100% {
-    // transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
     transform: scale(1);
   }
 }
 
-@keyframes sideInRight {
+@keyframes fromBottom {
   0% {
-    transform: translateX(-250px);
-    opacity: 0.2;
+    transform: translateY(200px);
+    opacity: (0);
   }
   100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes easeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+    transform: translateY(0);
+    opacity: (1);
   }
 }
 
@@ -116,13 +116,14 @@ $color-white: #fff;
   }
 }
 
-@keyframes fromBottom {
+@keyframes fromBottomSkill {
   0% {
-    transform: translateY(100px);
+    transform: translateY(300px);
     opacity: 0;
   }
   100% {
     transform: translateY(0);
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -157,5 +158,18 @@ $color-white: #fff;
   }
   to {
     transform: scale(0.7);
+  }
+}
+
+@keyframes cursorAni2 {
+  0% {
+    transition: scale(1);
+  }
+  50% {
+    transform: scale(2.5);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
   }
 }

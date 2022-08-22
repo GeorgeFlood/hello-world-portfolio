@@ -102,11 +102,11 @@
         </nav>
       </div>
 
-      <div class="header__container">
+      <div class="header__container" id="aboutMe">
         <div class="header__info">
           <h1 class="header__info--title">I'm George</h1>
           <h2 class="header__info--secondary">Let's talk!</h2>
-          <p class="header__info--bio" id="aboutMe">
+          <p class="header__info--bio">
             Hey! I've been coding front-end projects for the past 2 years,
             completed more courses than a for loop can iterate over, and have
             definitely entered my final phase of nerd. Javascript is both my
@@ -114,7 +114,9 @@
             looking to start my full-time developer position. If you're
             interested, click da button!
           </p>
-          <button class="header__info--btn">Slide in my DM's</button>
+          <a href="#form"
+            ><button class="header__info--btn">Slide in my DM's</button></a
+          >
         </div>
 
         <div class="header__img">
@@ -148,7 +150,7 @@
       </div>
 
       <div class="skills">
-        <div class="skills__col col-1 fade-in right">
+        <div class="skills__col col-1 fade-in fromBottomSkill">
           <img
             class="skills__col--img"
             src="img/html5.svg"
@@ -160,7 +162,7 @@
           </p>
         </div>
 
-        <div class="skills__col col-2 fade-in right">
+        <div class="skills__col col-2 fade-in fromBottomSkill">
           <img class="skills__col--img" src="img/sass.svg" alt="SASS emblem" />
           <p class="skills__col--p">
             SASS & CSS, I'm confident with my abilities CSS abilities, probably
@@ -169,7 +171,7 @@
           </p>
         </div>
 
-        <div class="skills__col col-3 fade-in right">
+        <div class="skills__col col-3 fade-in fromBottomSkill">
           <img
             class="skills__col--img"
             src="img/javascript.svg"
@@ -182,7 +184,7 @@
           </p>
         </div>
 
-        <div class="skills__col col-4 fade-in left">
+        <div class="skills__col col-4 fade-in fromBottomSkill">
           <img
             class="skills__col--img"
             src="img/react.svg"
@@ -195,12 +197,8 @@
           </p>
         </div>
 
-        <div class="skills__col col-5 fade-in left">
-          <img
-            class="skills__col--img"
-            src="img/node-js.svg"
-            alt="NodeJS emblem"
-          />
+        <div class="skills__col col-5 fade-in fromBottomSkill">
+          <img class="skills__col--img" src="img/git.svg" alt="NodeJS emblem" />
           <p class="skills__col--p">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
             nostrum ab delectus, sunt voluptatibus suscipit assumenda adipisci
@@ -209,7 +207,7 @@
           </p>
         </div>
 
-        <div class="skills__col col-6 fade-in left">
+        <div class="skills__col col-6 fade-in fromBottomSkill">
           <img
             class="skills__col--img"
             src="img/mysql.svg"

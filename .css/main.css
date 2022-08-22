@@ -1,85 +1,97 @@
 @charset "UTF-8";
 @-webkit-keyframes svgAnime {
   0% {
-    transform: rotate(0deg);
+    transform: translate(0, 0);
   }
-  40% {
-    transform: rotate(-6deg);
+  1.78571% {
+    transform: translate(5px, 0);
   }
-  80% {
-    transform: rotate(6deg);
+  3.57143% {
+    transform: translate(0, 0);
+  }
+  5.35714% {
+    transform: translate(5px, 0);
+  }
+  7.14286% {
+    transform: translate(0, 0);
+  }
+  8.92857% {
+    transform: translate(5px, 0);
+  }
+  10.71429% {
+    transform: translate(0, 0);
   }
   100% {
-    transform: rotate(0deg);
+    transform: translate(0, 0);
   }
 }
 @keyframes svgAnime {
   0% {
-    transform: rotate(0deg);
+    transform: translate(0, 0);
   }
-  40% {
-    transform: rotate(-6deg);
+  1.78571% {
+    transform: translate(5px, 0);
   }
-  80% {
-    transform: rotate(6deg);
+  3.57143% {
+    transform: translate(0, 0);
+  }
+  5.35714% {
+    transform: translate(5px, 0);
+  }
+  7.14286% {
+    transform: translate(0, 0);
+  }
+  8.92857% {
+    transform: translate(5px, 0);
+  }
+  10.71429% {
+    transform: translate(0, 0);
   }
   100% {
-    transform: rotate(0deg);
+    transform: translate(0, 0);
   }
 }
 @-webkit-keyframes scaleIn {
   0% {
+    transform: translateX(250px);
     opacity: 0.2;
     transform: scale(0.4);
   }
   100% {
+    transform: translateX(0);
     opacity: 1;
     transform: scale(1);
   }
 }
 @keyframes scaleIn {
   0% {
+    transform: translateX(250px);
     opacity: 0.2;
     transform: scale(0.4);
   }
   100% {
+    transform: translateX(0);
     opacity: 1;
     transform: scale(1);
   }
 }
-@-webkit-keyframes sideInRight {
+@-webkit-keyframes fromBottom {
   0% {
-    transform: translateX(-250px);
-    opacity: 0.2;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes sideInRight {
-  0% {
-    transform: translateX(-250px);
-    opacity: 0.2;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes easeIn {
-  0% {
+    transform: translateY(200px);
     opacity: 0;
   }
   100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
-@keyframes easeIn {
+@keyframes fromBottom {
   0% {
+    transform: translateY(200px);
     opacity: 0;
   }
   100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -143,23 +155,25 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes fromBottom {
+@-webkit-keyframes fromBottomSkill {
   0% {
-    transform: translateY(100px);
+    transform: translateY(300px);
     opacity: 0;
   }
   100% {
     transform: translateY(0);
+    transform: scale(1);
     opacity: 1;
   }
 }
-@keyframes fromBottom {
+@keyframes fromBottomSkill {
   0% {
-    transform: translateY(100px);
+    transform: translateY(300px);
     opacity: 0;
   }
   100% {
     transform: translateY(0);
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -221,6 +235,30 @@
   }
   to {
     transform: scale(0.7);
+  }
+}
+@-webkit-keyframes cursorAni2 {
+  0% {
+    transition: scale(1);
+  }
+  50% {
+    transform: scale(2.5);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes cursorAni2 {
+  0% {
+    transition: scale(1);
+  }
+  50% {
+    transform: scale(2.5);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
   }
 }
 *,
@@ -408,7 +446,7 @@ body {
 .header__info--secondary {
   display: inline-block;
   font-size: 5rem;
-  line-height: 3.7vw;
+  line-height: 3.9vw;
   font-weight: lighter;
   color: rgba(0, 0, 0, 0.8);
   margin-left: 4rem;
@@ -639,12 +677,17 @@ body {
   width: 10rem;
   background-color: rgb(206, 112, 217);
   top: 0;
-  left: 95%;
+  left: 96%;
   border-radius: 4px;
 }
 @media (max-width: 56.25em) {
   .main__heading::before {
     display: none;
+  }
+}
+@media (min-width: 112.5em) {
+  .main__heading::before {
+    left: 97%;
   }
 }
 
@@ -676,13 +719,12 @@ body {
 .skills .fade-in.appear {
   opacity: 1;
 }
-.skills .appear.right {
-  -webkit-animation: sideInRight 0.4s ease-in;
-          animation: sideInRight 0.4s ease-in;
-}
-.skills .appear.left {
-  -webkit-animation: scaleIn 0.4s ease-in;
-          animation: scaleIn 0.4s ease-in;
+.skills .appear.fromBottomSkill {
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-animation: fromBottomSkill 0.8s ease-in-out;
+          animation: fromBottomSkill 0.8s ease-in-out;
 }
 .skills::before {
   content: "";
@@ -703,8 +745,9 @@ body {
   position: relative;
   height: 12rem;
   width: 12rem;
-  -webkit-animation: svgAnime infinite 3s;
-          animation: svgAnime infinite 3s;
+  -webkit-animation: svgAnime 3.72s ease infinite;
+          animation: svgAnime 3.72s ease infinite;
+  transform-origin: 50% 50%;
   padding-bottom: 2rem;
   align-items: center;
   justify-content: center;
@@ -1337,6 +1380,11 @@ body {
   -webkit-animation: cursorAni 0.5s infinite alternate;
           animation: cursorAni 0.5s infinite alternate;
   z-index: 1;
+}
+.cursor--expand {
+  -webkit-animation: cursorAni2 0.4s forwards;
+          animation: cursorAni2 0.4s forwards;
+  border: 10px solid rgb(183, 16, 255);
 }
 @media (max-width: 56.25em) {
   .cursor {

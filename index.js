@@ -14,6 +14,7 @@ const contactTitle = document.getElementById("contactID");
 const contactName = document.getElementById("name");
 const contactEmail = document.getElementById("email");
 const contactMessage = document.getElementById("message");
+
 //////////////////////
 //nav bar
 
@@ -92,6 +93,14 @@ document.addEventListener("mousemove", (e) => {
     "top: " + (e.pageY + 30) + "px; left: " + (e.pageX - 10) + "px;"
   );
   console.log(cursor);
+});
+
+document.addEventListener("click", (e) => {
+  cursor.classList.add("cursor--expand");
+
+  setTimeout(() => {
+    cursor.classList.remove("cursor--expand");
+  }, 410);
 });
 
 ////////////////////////////////////////////

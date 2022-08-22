@@ -26,11 +26,15 @@
       width: 10rem;
       background-color: rgba(206, 112, 217, 1);
       top: 0;
-      left: 95%;
+      left: 96%;
       border-radius: 4px;
 
       @include respond(tab-port) {
         display: none;
+      }
+
+      @include respond(big-desk) {
+        left: 97%;
       }
     }
   }
@@ -66,12 +70,11 @@
     }
   }
 
-  .appear.right {
-    animation: sideInRight 0.4s ease-in;
-  }
-
-  .appear.left {
-    animation: scaleIn 0.4s ease-in;
+  .appear.fromBottomSkill {
+    position: relative;
+    top: 0;
+    left: 0;
+    animation: fromBottomSkill 0.8s ease-in-out;
   }
 
   &::before {
@@ -93,7 +96,8 @@
     position: relative;
     height: 12rem;
     width: 12rem;
-    animation: svgAnime infinite 3s;
+    animation: svgAnime 3.72s ease infinite;
+    transform-origin: 50% 50%;
     padding-bottom: 2rem;
     align-items: center;
     justify-content: center;

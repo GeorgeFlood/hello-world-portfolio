@@ -32,6 +32,11 @@
   animation: cursorAni 0.5s infinite alternate;
   z-index: 1;
 
+  &--expand {
+    animation: cursorAni2 0.4s forwards;
+    border: 10px solid rgb(183, 16, 255);
+  }
+
   @include respond(tab-port) {
     display: none;
   }
