@@ -292,7 +292,7 @@ html {
 }
 
 body {
-  font-family: "Lora", serif;
+  font-family: "Sora", sans-serif;
   padding: 1rem 1rem;
 }
 @media (max-width: 56.25em) {
@@ -421,7 +421,7 @@ body {
 }
 .header__info--title {
   font-size: 10rem;
-  padding: 3.8rem;
+  padding: 4.1rem;
   font-weight: 700;
   line-height: 0.1vw;
   display: inline-block;
@@ -658,10 +658,9 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
-  padding-top: 10rem;
+  padding: 5rem 0;
   overflow: hidden;
-  background-color: #ffffff;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75) 10%, transparent 80%, rgba(255, 255, 255, 0.75) 10%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5) 5%, transparent 80%, rgba(255, 255, 255, 0.35) 15%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
 }
 .main__heading {
   position: relative;
@@ -694,10 +693,13 @@ body {
 .skills {
   position: relative;
   margin: 10rem auto;
+  padding: 5rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(auto, 300px));
   grid-template-rows: repeat(auto-fit, 1fr);
   justify-content: center;
+  align-items: center;
+  text-align: center;
   grid-gap: 11rem;
 }
 .skills__col {
@@ -733,7 +735,7 @@ body {
   width: 10rem;
   background-color: rgb(206, 112, 217);
   bottom: -7rem;
-  left: -3rem;
+  left: -4.5rem;
   border-radius: 4px;
 }
 @media (max-width: 56.25em) {
@@ -743,23 +745,11 @@ body {
 }
 .skills__col--img {
   position: relative;
-  height: 12rem;
-  width: 12rem;
+  height: 15rem;
+  width: 15rem;
   -webkit-animation: svgAnime 3.72s ease infinite;
           animation: svgAnime 3.72s ease infinite;
-  transform-origin: 50% 50%;
   padding-bottom: 2rem;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  align-self: center;
-}
-.skills__col--p {
-  font-size: 2rem;
-  font-weight: lighter;
-  align-self: center;
-  justify-self: center;
-  color: rgba(63, 63, 63, 0.8);
 }
 
 .projects {
@@ -1377,7 +1367,7 @@ body {
   height: 2.5rem;
   border: 2px solid #fff;
   border-radius: 50%;
-  transition-duration: 250ms;
+  transition-duration: 500ms;
   -webkit-animation: cursorAni 0.5s infinite alternate;
           animation: cursorAni 0.5s infinite alternate;
   z-index: 1;

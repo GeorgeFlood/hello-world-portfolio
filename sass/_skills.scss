@@ -2,13 +2,12 @@
   position: relative;
   height: 100%;
   width: 100%;
-  padding-top: 10rem;
+
   overflow: hidden;
-  background-color: #ffffff;
   background-image: linear-gradient(
-      rgba(#fff, 0.75) 10%,
-      transparent 80%,
-      rgba(#fff, 0.75) 10%
+      rgba(#fff, 0.5) 5%,
+      transparent 75%,
+      rgba(#fff, 0.5) 20%
     ),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
 
@@ -43,10 +42,13 @@
 .skills {
   position: relative;
   margin: 10rem auto;
+  padding: 5rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(auto, 300px));
   grid-template-rows: repeat(auto-fit, 1fr);
   justify-content: center;
+  align-items: center;
+  text-align: center;
   grid-gap: 11rem;
 
   &__col {
@@ -84,7 +86,7 @@
     width: 10rem;
     background-color: rgba(206, 112, 217, 1);
     bottom: -7rem;
-    left: -3rem;
+    left: -4.5rem;
     border-radius: 4px;
 
     @include respond(tab-port) {
@@ -94,23 +96,10 @@
 
   &__col--img {
     position: relative;
-    height: 12rem;
-    width: 12rem;
+    height: 15rem;
+    width: 15rem;
     animation: svgAnime 3.72s ease infinite;
-    transform-origin: 50% 50%;
     padding-bottom: 2rem;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    align-self: center;
-  }
-
-  &__col--p {
-    font-size: 2rem;
-    font-weight: lighter;
-    align-self: center;
-    justify-self: center;
-    color: rgba(#3f3f3f, 0.8);
   }
 }
 
