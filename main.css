@@ -777,7 +777,7 @@ body {
   font-size: 2.4rem;
   margin: 0 auto;
   color: #bf3bfc;
-  width: 44%;
+  text-align: center;
   transition: all 0.4s cubic-bezier(0.33, 0.36, 0.1, 1.47);
 }
 
