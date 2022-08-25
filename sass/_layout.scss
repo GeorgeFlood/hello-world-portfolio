@@ -4,26 +4,26 @@
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: $color-white;
   z-index: -10;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(207, 106, 249);
+  background: $color-primary-bright;
   z-index: -10;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(237, 179, 250);
+  background: $color-primary-light;
   z-index: -10;
 }
 
 .cursor {
   position: absolute;
-  background-color: rgb(245, 195, 255);
-  outline: 3px solid rgb(240, 128, 255);
+  background-color: $color-primary-dark;
+  outline: 3px solid $color-primary-bright;
   width: 2.5rem;
   height: 2.5rem;
   border: 2px solid $color-white;
@@ -34,7 +34,7 @@
 
   &--expand {
     animation: cursorAni2 0.4s forwards;
-    border: 10px solid rgb(183, 16, 255);
+    border: 10px solid $color-primary;
   }
 
   @include respond(tab-port) {

@@ -1,7 +1,14 @@
 ////////////////////////////////
 /// COLOURS
 
+$color-primary: rgb(160, 66, 179);
+$color-primary-light: rgb(235, 197, 249);
+$color-primary-bright: rgb(191, 59, 252);
+$color-primary-dark: #551a8b;
+
 $color-white: #fff;
+$color-black: #000;
+$color-grey: rgb(92, 92, 92);
 
 ////////////////////////////////////////////////
 /// MEDIA QUERIES
@@ -56,8 +63,6 @@ $color-white: #fff;
     transform: translate(0, 0);
   }
 }
-
-////// NAME SHOULD PROBABLY BE CHANGED TO SCALE IN
 
 @keyframes scaleIn {
   0% {

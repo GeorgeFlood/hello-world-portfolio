@@ -5,9 +5,9 @@
 
   overflow: hidden;
   background-image: linear-gradient(
-      rgba(#fff, 0.5) 5%,
+      rgba($color-white, 0.5) 5%,
       transparent 75%,
-      rgba(#fff, 0.5) 20%
+      rgba($color-white, 0.5) 20%
     ),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
 
@@ -23,7 +23,7 @@
       position: absolute;
       height: 12rem;
       width: 10rem;
-      background-color: rgba(206, 112, 217, 1);
+      background-color: $color-primary-bright;
       top: 0;
       left: 96%;
       border-radius: 4px;
@@ -59,8 +59,15 @@
       text-align: center;
     }
 
-    &:hover {
-      transform: scale(1.05);
+    &:hover .skills__label {
+      top: -0.9rem;
+      transform: scale(1.1);
+      text-shadow: 0 2rem 3rem rgba($color-black, 0.4);
+    }
+
+    &:hover .skills__col--img {
+      transform: scale(1.1);
+      top: 0.9rem;
     }
   }
 
@@ -92,14 +99,31 @@
     @include respond(tab-port) {
       display: none;
     }
+    @include respond(big-desk) {
+      bottom: -8rem;
+    }
   }
 
   &__col--img {
     position: relative;
     height: 15rem;
     width: 15rem;
+    top: 0;
+    left: 0;
     animation: svgAnime 3.72s ease infinite;
     padding-bottom: 2rem;
+    transition: all 0.4s cubic-bezier(0.33, 0.36, 0.1, 1.47);
+  }
+
+  &__label {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 2.4rem;
+    margin: 0 auto;
+    color: rgba($color-primary-bright, 1);
+    width: 44%;
+    transition: all 0.4s cubic-bezier(0.33, 0.36, 0.1, 1.47);
   }
 }
 

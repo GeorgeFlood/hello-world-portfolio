@@ -1,36 +1,40 @@
 .title {
   font-size: 6rem;
   padding: 2.2vw;
+  padding-top: 10rem;
   text-transform: uppercase;
   font-weight: 900;
   display: inline-block;
-  background-image: linear-gradient(to right, #b9a4d3, rgb(160, 66, 179));
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    20%,
+    $color-primary
+  );
   -webkit-background-clip: text;
   color: transparent;
-  line-height: 0vw;
+  line-height: 0.5vw;
   @include respond(phone) {
-    font-size: 2.8rem;
-  }
-
-  @include respond(phone) {
+    font-size: 4rem;
+    padding: 4rem;
     text-align: center;
+    padding-top: 15rem;
   }
 }
 
 .title--span {
   font-size: 6rem;
   line-height: 2.6vw;
-  color: rgba(#000000, 0.7);
-  font-weight: bold;
-  font-style: italic;
+  color: rgba($color-black, 0.9);
+  font-weight: lighter;
+
   font-family: "Pacifico", cursive, sans-serif;
   margin-right: 30rem;
 
   @include respond(phone) {
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 0 auto;
     padding-right: 10rem;
-    line-height: 5.2vw;
   }
   @include respond(tab-port) {
     line-height: 5.5vw;
@@ -44,26 +48,31 @@
   padding: 2rem 0;
 }
 
-.project__card--btn button {
+.project__card--btn a {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  color: $color-black;
   height: 4rem;
-  width: 10rem;
+  width: 13rem;
   font-size: 1.7rem;
   font-weight: 500;
   background-color: transparent;
   border: none;
   border-radius: 5px;
-  outline: 3px solid rgb(255, 255, 255);
+  outline: 3px solid $color-white;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    background-color: #fff;
-    outline: 3px solid rgb(218, 96, 255);
+    background-color: $color-white;
+    color: $color-black;
+    outline: 3px solid $color-primary;
   }
 
   &:active {
-    color: rgb(153, 48, 174);
-    outline: 3px solid rgb(235, 197, 249);
-    background-color: rgb(251, 251, 251);
+    outline: 3px solid $color-primary-light;
+    background-color: $color-white;
   }
 }
