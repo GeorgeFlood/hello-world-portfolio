@@ -387,15 +387,16 @@ body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
-@media (max-width: 37.5em) {
-  .header__container {
-    flex-direction: column;
-  }
-}
 @media (max-width: 56.25em) {
   .header__container {
     flex-direction: column;
     padding-top: 25rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .header__container {
+    flex-direction: column;
+    padding-top: 13rem;
   }
 }
 .header__info {
@@ -435,6 +436,7 @@ body {
 @media (max-width: 37.5em) {
   .header__info--title {
     font-size: 5rem;
+    padding: 3.7rem;
   }
 }
 @media (min-width: 112.5em) {
@@ -469,7 +471,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .header__info--bio {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 .header__info--btn {
@@ -1426,7 +1428,7 @@ body {
 @media (max-width: 37.5em) {
   .title {
     font-size: 4rem;
-    padding: 3rem;
+    padding: 2rem;
     text-align: center;
     padding-top: 15rem;
   }

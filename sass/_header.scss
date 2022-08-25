@@ -89,13 +89,14 @@
     justify-content: center;
     backface-visibility: hidden;
 
-    @include respond(phone) {
-      flex-direction: column;
-    }
-
     @include respond(tab-port) {
       flex-direction: column;
       padding-top: 25rem;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+      padding-top: 13rem;
     }
   }
 
@@ -136,6 +137,7 @@
 
       @include respond(phone) {
         font-size: 5rem;
+        padding: 3.7rem;
       }
 
       @include respond(big-desk) {
@@ -164,7 +166,7 @@
       animation: fromTop 0.7s ease-in-out 0.4s backwards;
 
       @include respond(phone) {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
       }
     }
 
