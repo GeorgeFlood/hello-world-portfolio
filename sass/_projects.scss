@@ -81,7 +81,8 @@
       @include respond(phone) {
         margin: 2rem auto;
         background-color: $color-white;
-        width: 35%;
+        width: 37%;
+        padding: 0.5rem 1rem;
       }
 
       @include respond(big-desk) {

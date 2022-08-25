@@ -24,7 +24,7 @@
         rgba($color-white, 0.95) 50%,
         rgba($color-primary-light, 0.177) 50%
       ),
-      url(../img/seamless-pattern-envelopes-flat-line-icons-mail-background-message-open-envelope-letter-email-vector-illustrations-black-143678274.jpeg);
+      url(img/seamless-pattern-envelopes-flat-line-icons-mail-background-message-open-envelope-letter-email-vector-illustrations-black-143678274.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -34,7 +34,7 @@
           rgba($color-white, 0.95) 71%,
           rgba($color-black, 0.177) 50%
         ),
-        url(../img/seamless-pattern-envelopes-flat-line-icons-mail-background-message-open-envelope-letter-email-vector-illustrations-black-143678274.jpeg);
+        url(img/seamless-pattern-envelopes-flat-line-icons-mail-background-message-open-envelope-letter-email-vector-illustrations-black-143678274.jpeg);
     }
 
     @include respond(tab-port) {
