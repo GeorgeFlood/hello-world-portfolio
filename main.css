@@ -966,6 +966,11 @@ body {
   transition: all 0.5s ease-in-out;
   overflow: hidden;
 }
+@media (max-width: 37.5em) {
+  .projects__container--card {
+    transition: none;
+  }
+}
 @media (max-width: 56.25em) {
   .projects__container--card {
     background-color: rgb(235, 197, 249);
@@ -991,6 +996,7 @@ body {
     font-size: 3.2rem;
     border-bottom: 3px solid white;
     text-shadow: 0 3px 0 rgb(224, 223, 223), 0 4px 0 #c9c9c9, 0 5px 0 #bbb, 0 6px 0 #b9b9b9, 0 7px 0 #aaa, 0 8px 3px rgba(0, 0, 0, 0.1), 0 0 7px rgba(0, 0, 0, 0.1), 0 3px 5px rgba(0, 0, 0, 0.3), 0 5px 7px rgba(0, 0, 0, 0.2), 0 7px 12px rgba(0, 0, 0, 0.25), 0 12px 12px rgba(0, 0, 0, 0.2), 0 22px 23px rgba(0, 0, 0, 0.15);
+    transition: none;
   }
 }
 .projects__container--card p {
@@ -1006,6 +1012,7 @@ body {
   .projects__container--card p {
     font-size: 1.8rem;
     font-weight: 500;
+    transition: none;
   }
 }
 .projects__container--card img {
@@ -1035,6 +1042,7 @@ body {
 @media (max-width: 37.5em) {
   .projects__container--card:hover {
     transform: none;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.4);
   }
 }
 @media (max-width: 56.25em) {

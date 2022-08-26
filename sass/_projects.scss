@@ -136,6 +136,10 @@
       box-shadow: 0 2rem 5rem rgba($color-black, 0.4);
       transition: all 0.5s ease-in-out;
       overflow: hidden;
+
+      @include respond(phone) {
+        transition: none;
+      }
       @include respond(tab-port) {
         background-color: $color-primary-light;
       }
@@ -167,6 +171,7 @@
             0 0 7px rgba(0, 0, 0, 0.1), 0 3px 5px rgba(0, 0, 0, 0.3),
             0 5px 7px rgba(0, 0, 0, 0.2), 0 7px 12px rgba(0, 0, 0, 0.25),
             0 12px 12px rgba(0, 0, 0, 0.2), 0 22px 23px rgba(0, 0, 0, 0.15);
+          transition: none;
         }
       }
 
@@ -182,6 +187,7 @@
         @include respond(phone) {
           font-size: 1.8rem;
           font-weight: 500;
+          transition: none;
         }
       }
 
@@ -210,6 +216,7 @@
 
         @include respond(phone) {
           transform: none;
+          box-shadow: 0 2rem 5rem rgba($color-black, 0.4);
         }
 
         @include respond(tab-port) {
