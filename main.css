@@ -569,7 +569,7 @@ body {
 .nav--scroll {
   position: fixed;
   z-index: 1000;
-  top: 93.9%;
+  top: 94.1%;
   left: 0;
   width: 100%;
   height: 5rem;
@@ -744,7 +744,7 @@ body {
   position: absolute;
   height: 12rem;
   width: 10rem;
-  background-color: rgb(206, 112, 217);
+  background-color: rgb(191, 59, 252);
   bottom: -7rem;
   left: -4.5rem;
   border-radius: 4px;
@@ -931,8 +931,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-template-rows: repeat(auto-fit);
   grid-gap: 7rem 4rem;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 @media (max-width: 56.25em) {
   .projects__container--projects {
@@ -958,11 +956,13 @@ body {
   flex-direction: column;
   height: 100%;
   outline: 3px solid transparent;
-  background-color: rgba(128, 128, 128, 0.7);
-  border-radius: 4px;
+  background-color: rgba(169, 169, 169, 0.862);
+  border-radius: 6px;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.4);
   transition: all 0.5s ease-in-out;
   overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 @media (max-width: 37.5em) {
   .projects__container--card {
@@ -998,8 +998,11 @@ body {
   }
 }
 .projects__container--card p {
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
   position: relative;
-  text-align: left;
+  text-align: center;
   margin: auto 0;
   font-size: 1.5rem;
   line-height: 1.4;
