@@ -935,7 +935,9 @@ body {
 @media (max-width: 56.25em) {
   .projects__container--projects {
     grid-gap: 10rem 6rem;
+    padding-top: 2rem;
     grid-template-columns: repeat(2, minmax(300px, 400px));
+    justify-content: center;
   }
 }
 @media (max-width: 37.5em) {

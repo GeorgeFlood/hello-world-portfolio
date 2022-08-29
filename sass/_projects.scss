@@ -110,7 +110,9 @@
 
       @include respond(tab-port) {
         grid-gap: 10rem 6rem;
+        padding-top: 2rem;
         grid-template-columns: repeat(2, minmax(300px, 400px));
+        justify-content: center;
       }
       @include respond(phone) {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
