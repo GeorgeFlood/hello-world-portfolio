@@ -58,6 +58,11 @@
         margin-right: 2rem;
       }
 
+      &:link:last-child {
+        outline: 2px solid purple;
+        outline-offset: 0.5rem;
+      }
+
       &:hover {
         transform: scale(1.05);
       }
